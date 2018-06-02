@@ -25,6 +25,7 @@ static struct test_cmd cmds[] = {
 	{ "mktemp", cmd__mktemp },
 	{ "online-cpus", cmd__online_cpus },
 	{ "path-utils", cmd__path_utils },
+	{ "print-larger-than-ssize", cmd__print_larger_than_ssize },
 	{ "prio-queue", cmd__prio_queue },
 	{ "read-cache", cmd__read_cache },
 	{ "ref-store", cmd__ref_store },
