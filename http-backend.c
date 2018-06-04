@@ -442,7 +442,7 @@ static void pipe_fixed_length(const char *prog_name, int out, size_t req_len)
 
 	while (remaining_len > 0) {
 		size_t chunk_length = remaining_len > sizeof(buf) ? sizeof(buf) : remaining_len;
-		size_t n = xread(0, buf, chunk_length);
+		ssize_t n = xread(0, buf, chunk_length);
 		if (n < 0)
 			die_errno("Reading request failed");
 		if (write_in_full(out, buf, n) < 0)
