@@ -1398,8 +1398,8 @@ test_expect_success 'double dash "git checkout"' '
 	--ignore-other-worktrees Z
 	--recurse-submodules Z
 	--progress Z
-	--no-track Z
-	--no-recurse-submodules Z
+	--no-quiet Z
+	--no-... Z
 	EOF
 '
 
@@ -1607,6 +1607,7 @@ test_expect_success 'completion used <cmd> completion for alias: !f() { : git <c
 test_expect_success 'completion without explicit _git_xxx function' '
 	test_completion "git version --" <<-\EOF
 	--build-options Z
+	--no-build-options Z
 	EOF
 '
 
